@@ -10,6 +10,7 @@ import Messages from "./Messages";
 import Swipe from "./Swipe"; 
 import Account from "./Account";
 import UserAccount from "./UserAccount";
+import Authentication from "./Authentication";
 
 
 
@@ -87,16 +88,16 @@ function Router(){
       headerShown: false,
       headerBackTitle: "Back",
       headerTitleAlign: "center",
-      cardStyleInterpolator: CardStyleInterpolators.forFadeFromCenter,
+      cardStyleInterpolator: CardStyleInterpolators.forFadeFromBottomAndroid,
     }}
     >
     <Stack.Group>
       <Stack.Screen name = {SceneName.Main} component={Tabs}  />
       <Stack.Screen name={SceneName.UserAccount} component={UserAccount} />
     </Stack.Group>
-      
-
-
+    <Stack.Group>
+      <Stack.Screen name={SceneName.Authentication} component={Authentication} />
+    </Stack.Group>
     </Stack.Navigator>
   );
 }
