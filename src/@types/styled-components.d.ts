@@ -1,8 +1,8 @@
-import 'styled-components'
+import 'styled-components';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
-    borderRadius: string;
+    dark: boolean;
     colors: {
       primary: string;
       text: string;

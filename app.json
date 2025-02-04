@@ -6,7 +6,6 @@
     "orientation": "portrait",
     "icon": "./src/assets/images/icon.png",
     "scheme": "myapp",
-    "userInterfaceStyle": "automatic",
     "platforms": ["ios", "android"],
     "newArchEnabled": true,
     "ios": {
@@ -17,6 +16,7 @@
         "backgroundColor": "#111D40"
       }
     },
+    "userInterfaceStyle": "dark",
     "plugins": [
       "expo-router",
       [
@@ -34,7 +34,6 @@
     ],
     "experiments": {
       "typedRoutes": true
-    },
-    "userInterfaceStyle": "dark"
+    }
   }
 }

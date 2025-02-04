@@ -16,8 +16,6 @@ import Authentication from "./Authentication";
 
 const Tab = createBottomTabNavigator ();
 const Stack = createStackNavigator(); 
-const screenWidth = Dimensions.get('window').width;
-
 
 const Tabs = () => {
   const themeContext = useContext(ThemeContext) ; 
@@ -26,7 +24,7 @@ const Tabs = () => {
     <Tab.Navigator
      screenOptions={{
         headerShown: false,
-        tabBarInactiveTintColor: "black"
+        tabBarInactiveTintColor: themeContext?.colors.text,
      }}
      initialRouteName={SceneName.Swipe}
     >
@@ -84,6 +82,7 @@ function Router(){
   const theme = useContext(ThemeContext);
   return(
     <Stack.Navigator
+    initialRouteName={SceneName.Authentication}
     screenOptions={{
       headerShown: false,
       headerBackTitle: "Back",
